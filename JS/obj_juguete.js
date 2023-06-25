@@ -6,7 +6,7 @@ const juguete = {
         this.listar();
     },
 
-    crear: function (identificador, codigo, nombre, precio, stock,vecesVendido) {
+    crear: function (identificador, codigo, nombre, precio, stock, vecesVendido) {/* crea un objeto juguete */
         return{
             identificador : identificador,
             codigo : codigo,
@@ -17,7 +17,7 @@ const juguete = {
         };
     },
 
-    alta: function () {
+    alta: function () {/* Agregar un nuuevo juguete */
         
         let identificador = document.getElementById('identificador').value;
         let codigo = document.getElementById('codigo').value;
@@ -27,7 +27,7 @@ const juguete = {
 
         vecesVendido=0;
 
-        let pos = this.buscarPos(identificador);
+        let pos = this.buscarPos(identificador);/* Busca la posicion con la ID, si devuelve -1 significa que no lo encontro */
         if (pos != -1) {
             alert('Error en alta: ya existe un juguete con este ID.');
             return;
@@ -63,8 +63,8 @@ const juguete = {
 
             
         const objJuguete = this.crear(identificador, codigo, nombre, precio, stock, vecesVendido);
-        this.juguetes.push(objJuguete);
-        memoria.escribir('juguetes', this.juguetes);
+        this.juguetes.push(objJuguete);/* agrego el objeto juguete a la array juguetes */
+        memoria.escribir('juguetes', this.juguetes);/* escribo en local storage para que al cerrar el navegador no se pierdan los datos */
         console.log(this.juguetes);
         this.listar();
         this.limpiar();
@@ -84,7 +84,7 @@ const juguete = {
         }
     },
 
-    buscarPos: function (identificador) {
+    buscarPos: function (identificador) {/* Busca la posicion de un objeto juguete mediante la ID */
         for (let pos = 0; pos < this.juguetes.length; pos++) {
             let objJuguete = this.juguetes[pos];
             if (objJuguete.identificador == identificador) {
@@ -93,7 +93,7 @@ const juguete = {
         }
         return -1;
     },
-    buscarCodigo: function (codigo) {
+    buscarCodigo: function (codigo) {/* Busca si ya existe el codigo ingresado  en la array de juguetes */
         for (let pos = 0; pos < this.juguetes.length; pos++) {
             let objJuguete = this.juguetes[pos];
             if (objJuguete.codigo == codigo) {
@@ -182,7 +182,7 @@ const juguete = {
         this.limpiar();
     },
 
-    seleccionar: function(){
+    seleccionar: function(){/* Selecciona un juguete agregado y carga los datos en los inputs respectivos */
         let numero = document.getElementById('lista').value;
         for (let objJuguete of this.juguetes) {
             if(numero == objJuguete.identificador){

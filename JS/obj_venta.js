@@ -2,7 +2,7 @@ const venta = {
     ventas: [],
     juguetes: [],
 
-    inicializar: function () {
+    inicializar: function () {/* inicializa las funciones y acciones que se cargaran apenas cargue la pagina */
         this.ventas = memoria.leer('ventas');
         this.juguetes = memoria.leer('juguetes');
         this.listar();
@@ -203,7 +203,7 @@ const venta = {
         document.getElementById('total_recaudado').value = '$'+ parseInt(totalVentas)  ;
     },
 
-    juguetesConStock: function (params) {
+    juguetesConStock: function (params) {/* busca todos los juguetes que tengan un stock mayor a 0 y los lista */
         let lista = document.getElementById('conStock').options;
         let texto_listado = "";
         lista.length = 0;
@@ -218,7 +218,7 @@ const venta = {
         }
     },
 
-    jugueteMasVendido: function (params) {
+    jugueteMasVendido: function (params) {/* Busca el juguete con mas unidades vendidas */
         let masVendido;
         let cantidad=0;
         for (let objVenta of this.juguetes) {
