@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/0e1554a48e.js" crossorigin="anonymous"></script>
+    <title>Formulario de ventas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style_ventas.css">
+    <script src="JS/dominio.js"></script>
+    <script src="JS/memoria.js"></script>
+    <script src="JS/obj_venta.js"></script>
+</head>
+<body onload="venta.inicializar()">
+    <h1 class="jugueteria">Jugueteria EMG</h1>
+    <form id="form" class="formulario" action="">
+
+        <h1 class="title">Gestión de ventas</h1>
+
+        <label for="codigo">ID</label>
+        <input type="number" name="identificador" maxlength="3" id="identificador" placeholder="ID de la venta" >
+        
+        <label for="nombre">Juguete</label>
+        <select class="options" id="juguete" onblur="venta.cargarInfoJuguete()">
+            <!-- <option value="">Seleccione juguete</option> -->
+        </select>
+        <div class="juguete">
+            <input type="text" class="unique" readonly name="precio" maxlength="3" id="precio" placeholder="Precio">
+
+            <input type="text" class="unique" readonly name="stock" maxlength="3" id="stock" placeholder="Stock">
+        </div>
+
+        <label for="nombre">Cantidad</label>
+        <input type="number" name="cantidad" id="cantidad" onblur="venta.cargarPrecioTotal()" placeholder="Cantidad a llevar">
+
+        <label for="nombre">Total $$</label>
+        <input type="text" readonly name="pagar" id="pagar" placeholder="Total precio" >
+
+        
+        <div class="botones">
+            <input class="boton" type="button" onclick="venta.alta()" value="Comprar">
+            <!-- <input class="boton" type="button" onclick="venta.modificar()" value="Modificar"> -->
+            <input class="boton" type="button" onclick="venta.limpiar()" value="Reset">
+            <input class="boton" type="button" onclick="venta.baja()" value="Devolver">
+        </div>
+        
+        <select id="lista" size="8" style="width: 90%" onclick="venta.seleccionar()"></select>
+
+    </form>
+
+
+
+    <div class="consultas">
+        <h1 class="title">Consultas</h1>
+        <div class="consulta">
+            <label for="total_recaudado">Total recaudado</label>
+            <input type="text" name="" id="total_recaudado" onblur="venta.TotalRecaudado()" readonly >
+        </div>
+
+        <div class="consulta">
+            <label for="masVendido">Juguete mas vendido</label>
+            <input type="text" name="" id="masVendido" onblur="venta.jugueteMasVendido()" readonly >
+        </div>
+
+        <div class="consulta unique2">
+            <label for="conStock">Juguetes con stock</label>
+            <select class="conStock" id="conStock" size="8"></select>
+        </div>
+    </div>
+
+    <div class="flechas">
+        <a href="frm_juguetes.html" ><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="index.html"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</body>
+</html>

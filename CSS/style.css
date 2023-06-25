@@ -1,0 +1,72 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    background-image: url(../imagenes/jugueteria.jpg);
+    background-size: cover;
+}
+
+.jugueteria{
+    color: rgb(55, 158, 226);
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(26, 25, 25, 0.733); ;
+}
+form{
+    width: 550px;
+    height: 570px;
+    background-color: rgba(26, 25, 25, 0.733);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.title{
+    font-size: 25px;
+    color: rgb(34, 116, 171);
+    margin-bottom: 20px;
+}label{
+    font-size: 20px;
+    color: rgb(37, 143, 214);
+    height: 30px;
+}
+input{
+    height: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+form .boton{
+    width: 5em;
+    height: 2em;
+    background-color: rgb(37, 143, 214);
+    border: 1px solid black;
+    
+}
+
+form .botones{
+    margin-top: 30px;
+}
+
+.fa-arrow-left:before,.fa-arrow-right:before{
+    font-size: 60px;
+    color: rgb(37, 143, 214);
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: -2em;
+}
+
+.flechas{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -60px;
+}

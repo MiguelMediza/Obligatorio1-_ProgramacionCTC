@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/0e1554a48e.js" crossorigin="anonymous"></script>
+    <title>Formulario de juguetes</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/dominio.js"></script>
+    <script src="JS/memoria.js"></script>
+    <script src="JS/obj_juguete.js"></script>
+</head>
+<body onload="juguete.inicializar()">
+    <h1 class="jugueteria">Jugueteria EMG</h1>
+    <form id="form" class="formulario" action="">
+
+        <h1 class="title">Gestión de juguetes</h1>
+        
+        <label for="codigo">ID</label>
+        <input type="number" name="identificador" maxlength="3" id="identificador" placeholder="ID del juguete" >
+
+        <label for="codigo">Código</label>
+        <input type="number" name="codigo" maxlength="3" id="codigo" placeholder="Código de juguete">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre de juguete">
+
+        <label for="precio">Precio</label>
+        <input type="number" step="0.01" name="precio" id="precio" placeholder="Precio de juguete">
+
+        <label for="stock">Stock</label>
+        <input type="number" name="stock" maxlength="3" id="stock" placeholder="Stock de juguete"> 
+
+        <div class="botones">
+            <input class="boton" type="button" onclick="juguete.alta()" value="Agregar">
+            <input class="boton" type="button" onclick="juguete.modificar()" value="Modificar">
+            <input class="boton" type="button" onclick="juguete.limpiar()" value="Reset">
+            <input class="boton" type="button" onclick="juguete.baja()" value="Eliminar">
+        </div>
+        
+        <select id="lista" size="8" style="width: 90%" onclick="juguete.seleccionar()"></select>
+
+    </form>
+
+    <div class="flechas">
+        <a href="index.html" ><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="frm_ventas.html"><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</body>
+</html>

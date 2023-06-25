@@ -1,0 +1,58 @@
+form{
+    width: 350px;
+    height: 600px;
+    background-color: rgba(26, 25, 25, 0.733);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+form .options{
+    height: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 175px;
+}
+.unique{
+    width: 80px;
+    margin: auto;
+}
+
+.juguete{
+   display: flex;
+   width: 185px;
+   justify-content: space-between;
+   margin-bottom: 20px;
+}
+
+.consultas{
+    width: 350px;
+    height: 320px;
+    background-color: rgba(26, 25, 25, 0.733);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+}
+.consulta{
+    margin-bottom: 10px;
+}
+.conStock{
+    height: auto;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 295px;
+}
+.consultas label {
+    text-align: center;
+}
+
+.unique2{
+    display: flex;
+    flex-direction: column;
+}
