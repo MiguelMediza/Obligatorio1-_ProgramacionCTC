@@ -193,7 +193,33 @@ const juguete = {
                 document.getElementById('stock').value = objJuguete.stock;
             }
         }
+    },
+
+    cargarDatosDePrueba: function (params) {
+        let unJuguete;
+
+        unJuguete = {identificador: 1, codigo: 111, nombre: "Peluche", precio: 150, stock: 100, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+
+        unJuguete = {identificador: 2, codigo: 222, nombre: "Dinosaurio", precio: 80, stock: 125, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+
+        unJuguete = {identificador: 3, codigo: 333, nombre: "Monolopoy", precio: 550, stock: 25, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+
+        unJuguete = {identificador: 4, codigo: 444, nombre: "Cartas", precio: 55, stock: 1000, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+        
+        unJuguete = {identificador: 5, codigo: 555, nombre: "Domino", precio: 255, stock: 100, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+
+        unJuguete = {identificador: 6, codigo: 666, nombre: "Oso Gigante", precio: 1500, stock: 10, vecesVendido: 0}
+        this.juguetes.push(unJuguete);
+
+        this.listar();
+        memoria.escribir('juguetes', this.juguetes)
     }
 
 
 }
+

@@ -250,6 +250,30 @@ const venta = {
             }
         }
     },
+
+    // cargarDatosDePrueba: function (params) {
+    //     let unaVenta
+    //     unaVenta = {identificador: 1, codigo: 111, juguete: 1, cantidad: 20, totalPrecio: 3000}
+    //     this.ventas.push(unaVenta);
+
+    //     unaVenta = {identificador: 2, codigo: 222, juguete: 2, cantidad: 10, totalPrecio: 800}
+    //     this.ventas.push(unaVenta);
+
+    //     unaVenta = {identificador: 3, codigo: 333, juguete: 3, cantidad: 5, totalPrecio: 2750}
+    //     this.ventas.push(unaVenta);
+
+    //     unaVenta = {identificador: 4, codigo: 444, juguete: 4, cantidad: 100, totalPrecio: 5500}
+    //     this.ventas.push(unaVenta);
+        
+    //     unaVenta = {identificador: 5, codigo: 555, juguete: 5, cantidad: 25, totalPrecio: 6375}
+    //     this.ventas.push(unaVenta);
+
+    //     unaVenta = {identificador: 6, codigo: 666, juguete: 6, cantidad: 1, totalPrecio: 1500}
+    //     this.ventas.push(unaVenta);
+
+    //     this.listar();
+    //     memoria.escribir('ventas', this.ventas)
+    // }
     // seleccionarConsulta: function(){
     //     let numero = document.getElementById('conStock').value;
     //     for (let objJuguete of this.juguetes) {
